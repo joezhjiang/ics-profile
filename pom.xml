@@ -65,9 +65,9 @@
 			<properties>
 				<app.environment>development</app.environment>
 			</properties>
-			<activation>
+			<!-- <activation>
 				<activeByDefault>true</activeByDefault>
-			</activation>
+			</activation> -->
 		</profile>
 
 		<profile>
@@ -75,6 +75,9 @@
 			<properties>
 				<app.environment>test</app.environment>
 			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 		</profile>
 
 		<profile>
