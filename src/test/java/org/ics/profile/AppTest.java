@@ -1,38 +1,34 @@
 package org.ics.profile;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import static org.junit.Assert.*;
 
-/**
- * Unit test for simple App.
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+/**       
+ * @Project：ics-profile   
+ * @Package org.ics.profile
+ * @Title: AppTest.java 
+ * @Description: TODO
+ * @Author jiangzhihu  
+ * @CreateDate：2014年10月28日 上午11:59:38    
+ * @Modifier：jiangzhihu    
+ * @ModifyDate：2014年10月28日 上午11:59:38    
+ * @ModifyNote：    
+ * @version  V1.0.0 
  */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration("classpath:applicationContext.xml")
+public class AppTest {
+    @Autowired
+    private App app;
+    
+    @Test
+    public void testGetEnvironment() {
+        System.out.println(app.getEnvironment());
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
 }
